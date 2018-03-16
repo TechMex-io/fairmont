@@ -80,6 +80,9 @@
       .border-black
       .text-black
   }
+  .site-nav {
+    transition: background-color .3s;
+  }
   .fleur {
     left: -15%;
     opacity: .15;

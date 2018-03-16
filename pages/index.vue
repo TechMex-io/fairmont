@@ -1,34 +1,32 @@
 <template>
   <div>
-    <nav class="fixed pin-t w-full z-10 py-4 bg-grey-lighter">
-      <ul class="md:w-1/2 mx-auto sm:ml-auto sm:mr-0 flex list-reset content-around justify-around">
-        <li><a class="text-white no-underline uppercase" href="#">Lease</a></li>
-        <li><a class="text-white no-underline uppercase" href="#">Purchase</a></li>
-        <li><a class="text-white no-underline uppercase" href="#">Contact</a></li>
-      </ul>
+    <nav class="fixed pin-t w-full z-10 py-4 site-nav" :class="{'bg-orange-fairmont-light shadow-md': scrolled}">
+      <div class="container mx-auto">
+        <ul class="md:w-1/3 mx-auto sm:ml-auto sm:mr-0 flex list-reset content-around justify-around">
+          <li><a class="no-underline uppercase pb-1 text-sm border-orange-lighter hover:text-orange-lighter hover:border-grey-light text-white" href="#" :class="{'border-b-2': !scrolled}">Lease</a></li>
+          <li><a class="no-underline uppercase pb-1 text-sm border-orange-lighter hover:text-orange-lighter hover:border-grey-light text-white" href="#" :class="{'border-b-2': !scrolled}">Purchase</a></li>
+          <li><a class="no-underline uppercase pb-1 text-sm border-orange-lighter hover:text-orange-lighter hover:border-grey-light text-white" href="#" :class="{'border-b-2': !scrolled}">Contact</a></li>
+        </ul>
+      </div>
     </nav>
-    <header class="h-screen relative bg-center bg-fixed bg-cover bg-no-repeat">
+    <header class="h-screen content-center flex-wrap relative bg-center bg-fixed bg-cover bg-no-repeat flex content-center flex-wrap bg-grey-lighter h-48 site-header" @click="handleScroll()">
       <div class="absolute pin bg-orange-fairmont opacity-50 overlay"></div>
-      <div class="relative container mx-auto px-6 flex content-center flex-wrap h-full">
-        <div class="w-1/2 text-white hero-text">
-
-        <!-- <svg class="w-0 md:absolute fleur" viewBox="0 0 279 311" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g class="fill-current" id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <path d="M140.651,200.996 L138.352,200.996 C139.085,194.494 139.501,187.583 139.501,180.239 C139.501,187.583 139.913,194.494 140.651,200.996 Z M92.058,74.243 C92.058,117.127 124.517,116.733 128.366,170.677 L92.058,74.243 Z M225.855,94.816 C202.839,94.816 165.56,124.109 150.627,170.677 C154.485,116.733 186.937,117.127 186.937,74.243 C186.937,31.435 149.884,31.989 139.501,0.857 C129.117,31.989 92.058,31.435 92.058,74.243 C92.058,117.127 124.517,116.733 128.366,170.677 C113.441,124.109 76.162,94.816 53.143,94.816 C22.57,94.816 0.33,115.38 0.33,140.397 C0.33,165.41 13.673,198.207 57.041,190.43 C48.312,172.263 47.085,148.292 66.489,143.735 C84.727,139.447 121.362,171.485 125.363,200.996 L106.888,200.996 C101.153,200.996 96.509,205.637 96.509,211.371 C96.509,217.098 101.153,221.743 106.888,221.743 L123.583,221.743 C120.061,233.407 114.4,243.501 105.493,248.801 C84.042,261.563 77.913,248.794 80.385,242.682 C61.111,240.464 56.483,271.41 77.233,278.819 C93.618,284.668 122.92,266.481 134.538,221.743 L136.387,221.743 C129.016,250.71 123.314,262.029 109.852,275.484 C124.864,283.825 139.501,303.28 139.501,311.067 C139.501,303.28 154.136,283.825 169.148,275.484 C155.685,262.029 149.986,250.71 142.61,221.743 L144.457,221.743 C156.081,266.481 185.383,284.668 201.76,278.819 C222.519,271.41 217.889,240.464 198.614,242.682 C201.083,248.794 194.956,261.563 173.509,248.801 C164.601,243.501 158.941,233.407 155.417,221.743 L172.111,221.743 C177.844,221.743 182.493,217.098 182.493,211.371 C182.493,205.637 177.844,200.996 172.111,200.996 L153.637,200.996 C157.639,171.485 194.277,139.447 212.509,143.735 C231.915,148.292 230.69,172.263 221.96,190.43 C265.33,198.207 278.67,165.41 278.67,140.397 C278.67,115.38 256.43,94.816 225.855,94.816 Z"></path>
-            </g>
-        </svg> -->
-          <div class="relative">
-            <h1 class="text-5xl md:text-6xl leading-tight">The Fairmont Condominiums</h1>
-            <h2 class="uppercase font-normal font-sans opacity-75 my-4">El Paso, Texas</h2>
-            <h3 class="font-normal font-sans leading-normal mb-8">Located in El Paso's Westside Rim Area Neighborhood on the corner of Rim and Stanton</h3>
-            <a href="" class="button button-white">Learn More</a>
+        <div class="relative container mx-auto px-6">
+          <div class="md:w-1/2 h-auto text-white text-shadow-all hero-text">
+            <div class="relative h-auto">
+              <h1 class="text-4xl md:text-6xl leading-tight">{{siteTitle}}</h1>
+              <h2 class="uppercase font-normal font-sans opacity-75 my-4">El Paso, Texas</h2>
+              <h3 class="font-normal font-sans leading-normal mb-8">Located in El Paso's Westside Rim Area Neighborhood on the corner of Rim and Stanton</h3>
+              <a href="#about" class="button button-white">Learn More</a>
+            </div>
           </div>
         </div>
-      </div>
+        <div class="w-full"></div>
     </header>
-
+    
     <main role="main">
       <section class="mb-24 py-32 about">
+        <a name="about"></a>
         <div class="container sm:w-4/5 mx-auto">
           <h2 class="text-center uppercase text-4xl mb-4 mt-8 border-after border-after-center">About the Fairmont</h2>
           <div class="md:flex justify-center content-center flex-wrap">
@@ -110,26 +108,52 @@
       </section>
 
 
-      <section class="relative comfort">
-        <!-- <div class="absolute pin bg-black opacity-75 overlay"></div> -->
+      <section class="relative bg-top comfort">
+        <div class="absolute pin bg-black opacity-25 md:invisible overlay"></div>
         <div class="container py-8 mx-auto relative">
           <div class="w-4/5 md:w-3/5 mx-auto py-4 lg:h-64 text-white">
             <h2 class="text-center uppercase text-4xl mb-4 mt-8 border-after border-after-center">Comfort &amp; Elegance</h2>
-            <h3 class="font-sans font-thin leading-normal text-lg px-8">Our condominiums are perfect for those individuals seeking a relatively maintenance-free lifestyle in a secure and elegant community.</h3>
+            <h3 class="font-sans font-thin leading-normal text-lg px-8 text-shadow">Our condominiums are perfect for those individuals seeking a relatively maintenance-free lifestyle in a secure and elegant community.</h3>
           </div>
         </div>
       </section>
     </main>
 
 
-    <footer class="bg-orange-fairmont-dark py-8">
-      <div class="container mx-auto py-8 opacity-75 font-thin">
-        <h2>The Fairmont</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, expedita laborum. Deleniti facere impedit eveniet ex quod iste, illum laudantium blanditiis dolor explicabo doloribus magni architecto exercitationem quas maxime saepe.</p>
-        <p>Expedita, sapiente iure? Omnis ea repellat quae at earum excepturi eius nam dolorem eum ipsum, possimus quam saepe, laboriosam nulla. Hic, iusto? Cumque facilis totam temporibus architecto aspernatur tempore inventore.</p>
-        <p>Dolore, minima? Quia ad soluta quod a, consequatur, quisquam voluptate doloribus neque molestias harum asperiores deleniti necessitatibus beatae perferendis dicta. Dolor eligendi, illo ab sint consectetur fugiat ea quisquam asperiores.</p>
-        <p>Nobis odio asperiores libero minima nisi quae necessitatibus quaerat nesciunt doloremque, voluptatibus tempore sed assumenda molestias fugit, consequatur aut eos ipsum! Exercitationem adipisci facere ducimus dolor fugiat omnis dolorum deleniti.</p>
-        <p>Placeat minus sapiente, amet unde dolores, ad aliquid culpa aspernatur ducimus atque quae sit porro delectus illum id ullam temporibus repudiandae autem necessitatibus mollitia laborum enim. Doloremque magni necessitatibus cum!</p>
+    <footer class="bg-grey-lightest py-8">
+      <div class="container mx-auto py-8 px-8 opacity-75 font-thin text-center md:text-left">
+        <div class="md:flex text-orange-fairmont">
+          <div class="md:w-2/5 mb-8">
+            <img src="~/static/fairmont-logo.png" alt="Fairmont logo" class="md:w-1/2 mb-4">
+            <p class="leading-normal">
+              PM Management, LLC
+              <br>
+              1800 N. Stanton St.
+              <br>
+              El Paso, TX
+              <br>
+              915.533.6908
+              <br>
+              <a href="mailto:office@thefairmontcondominiums.com" class="text-orange-fairmont">office@thefairmontcondominiums.com</a>
+            </p>
+          </div>
+          <div class="md:w-1/5 mb-8">
+            <nav class="footer-nav">
+              <p class="uppercase text-sm font-bold mb-4">Site Navigation</p>
+              <ul class="list-reset">
+                <li class="pb-4"><a class="text-orange-fairmont" href="#">Lease</a></li>
+                <li class="pb-4"><a class="text-orange-fairmont" href="#">Purchase</a></li>
+                <li class="pb-4"><a class="text-orange-fairmont" href="#">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="md:w-2/5">
+            <p class="uppercase text-sm font-bold mb-4">Map</p>            
+            <a href="https://www.google.com/maps/place/Fairmont+Condominiums/@31.7715045,-106.4989188,17z/data=!3m1!4b1!4m12!1m6!3m5!1s0x86e75856d58c9aaf:0xb1778702da544be9!2sFairmont+Condominiums!8m2!3d31.7715!4d-106.4967248!3m4!1s0x86e75856d58c9aaf:0xb1778702da544be9!8m2!3d31.7715!4d-106.4967248?hl=en-US">
+              <img src="~/static/footer-map.png" alt="Map of Fairmont in El Paso" class="shadow-md">
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
 
@@ -139,17 +163,49 @@
 <script>
 
 export default {
-  
+  data() {
+    return {
+      siteTitle: 'The Fairmont Condominiums',
+      scrolled: false
+    }
+  },
+  methods: {
+    handleScroll() {
+      var navHeight = document.querySelector('.site-nav').offsetHeight;
+      var headerHeight = document.querySelector('.site-header').offsetHeight;
+      var scrollPosition = window.scrollY;
+
+      if (scrollPosition >= (headerHeight)/2) {
+        this.scrolled = true;
+      } else {
+        this.scrolled = false;
+      }
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', () => {
+      this.handleScroll();
+    });
+  },
+  created() {
+    
+  }
 }
 </script>
 
 <style scoped>
+a {
+  transition: color .3s, border-color .45s;
+}
 header {
   background-image: url('~/static/fairmontbuilding2.jpg');
   background-position-y: bottom;
 }
-.hero-text {
-  text-shadow: 1px 2px 8px rgba(0,0,0,.3);
+.text-shadow {
+  text-shadow: 2px 2px 8px rgba(0,0,0,.93);
+}
+.text-shadow-all * {
+  text-shadow: 2px 2px 8px rgba(0,0,0,.93);
 }
 main {
   background: repeating-linear-gradient(
@@ -173,7 +229,7 @@ main {
 }
 
 .border-after-center:after {
-  margin: 2rem auto;
+  margin: 1rem auto 2rem;
 }
 
 .border-after-left:after {
