@@ -7,11 +7,32 @@
           <h2 class="text-center uppercase text-4xl mb-4 mt-8 border-after border-after-center">Units For Lease</h2>
           <div class="md:flex justify-center content-center flex-wrap">
             <div class="leading-normal font-light md:w-1/2 md:pl-24 px-8 mb-4">
-              <h3>No Availability</h3>
+              <h3>Unit #904</h3>
+              <h3>1 Bedroom/1 Bath</h3>
+              <h3>770.36 square feet</h3>
+              <h3>Monthly Rent  - $950.00</h3>
+              <h3>By appointment only.</h3>
             </div>
-            <p class="leading-normal font-light md:w-1/2 px-8">
-              Thank you for your interest in the Fairmont Condominiums. We currently do have any units for lease. Please continue to check our site for listings as this is our most current information and will always reflect current availability. 
-            </p>
+            <div class="leading-normal font-light md:w-1/2 px-8">
+              <p class="mb-4">
+                The Fairmont Condominium Association
+                <br>
+                1800 N. Stanton
+                <br>
+                El Paso, TX  79902
+              </p>
+
+              <p>
+                Leases managed by FPM Management, L.L.C.
+                <br>
+                1800 N. Stanton
+                <br>
+                El Paso, TX  79902
+                <br>
+                <a href="" class="button button-black mt-4 inline-block">Request an Appointment</a>
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
@@ -19,12 +40,30 @@
       <section class="my-4 amenities">
         <div class="container mx-auto px-8">
 
+
+
+
+
+
+
+
+
+
           <div class="sm:flex flex-wrap">
             <div class="sm:w-1/2 sm:pr-4 mb-8">
-              <img src="~/static/fairmontbuilding.jpg" alt="" class="shadow-lg rounded" srcset="">
+              <img src="~/static/Unit_904__Living_Room_1.jpg" alt="" class="shadow-lg rounded" srcset="">
             </div>
             <div class="sm:w-1/2 sm:pl-4 mb-8">
-              <img src="~/static/fairmontbuilding2.jpg" alt="" class="shadow-lg rounded" srcset="">
+              <img src="~/static/Unit_904__Dining_Room_2.jpg" alt="" class="shadow-lg rounded" srcset="">
+            </div>
+            <div class="sm:w-1/2 sm:pr-4 mb-8">
+              <img src="~/static/Unit_904__Kitchen_3.jpg" alt="" class="shadow-lg rounded" srcset="">
+            </div>
+            <div class="sm:w-1/2 sm:pl-4 mb-8">
+              <img src="~/static/Unit_904__Bedroom_4.jpg" alt="" class="shadow-lg rounded" srcset="">
+            </div>
+            <div class="sm:w-1/2 sm:pl-4 mb-8">
+              <img src="~/static/Unit_904_Balcony_View_5.jpg" alt="" class="shadow-lg rounded" srcset="">
             </div>
           </div>
         </div>
