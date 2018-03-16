@@ -62,6 +62,10 @@
       .font-bold;
   }
 
+  a {
+    transition: color .3s, border-color .45s;
+  }
+
   .button {
     @apply
       .px-4
@@ -80,9 +84,39 @@
       .border-black
       .text-black
   }
+
+
+  .border-after:after {
+    background-color: rgb(189, 106, 5);
+    content: '';
+    display: block;
+    height: 3px;
+    width: 10%;
+  }
+  
+  .border-after-center:after {
+    margin: 1rem auto 2rem;
+  }
+  
+  .border-after-left:after {
+    margin: .25rem 0;
+  }
+
+  .primary-nav {
+    transition: background-color .3s;
+  }
   .fleur {
     left: -15%;
     opacity: .15;
     top: -5%;
     width: 600px;
+  }
+  main {
+    background: repeating-linear-gradient(
+      to right,
+      #fff,
+      #fff 60px,
+      #f7f7f7 60px,
+      #f7f7f7 61px
+  );
   }
