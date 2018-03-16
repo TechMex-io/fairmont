@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-grey-lightest py-8">
+  <footer class="bg-grey-lightest pt-8">
       <div class="container mx-auto py-8 px-8 opacity-75 font-thin text-center md:text-left">
         <div class="md:flex text-orange-fairmont">
           <div class="md:w-2/5 mb-8">
@@ -14,6 +14,10 @@
               915.533.6908
               <br>
               <a href="mailto:office@thefairmontcondominiums.com" class="text-orange-fairmont">office@thefairmontcondominiums.com</a>
+            </p>
+
+            <p class="mt-8 text-sm invisible md:visible">
+              <a href="http://www.tech-mex.io" target="_blank" class="text-grey-darkest">Site by Tech-Mex.io</a>
             </p>
           </div>
           <div class="md:w-1/5 mb-8">
@@ -31,8 +35,14 @@
             <a href="https://www.google.com/maps/place/Fairmont+Condominiums/@31.7715045,-106.4989188,17z/data=!3m1!4b1!4m12!1m6!3m5!1s0x86e75856d58c9aaf:0xb1778702da544be9!2sFairmont+Condominiums!8m2!3d31.7715!4d-106.4967248!3m4!1s0x86e75856d58c9aaf:0xb1778702da544be9!8m2!3d31.7715!4d-106.4967248?hl=en-US">
               <img src="~/static/footer-map.png" alt="Map of Fairmont in El Paso" class="shadow-md">
             </a>
+            <p class="mt-8 text-sm visible md:invisible">
+              <a href="http://www.tech-mex.io" target="_blank" class="text-grey-darkest">Site by Tech-Mex.io</a>
+            </p>
           </div>
         </div>
+
+
+          
       </div>
     </footer>
 </template>
