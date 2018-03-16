@@ -3,9 +3,10 @@
     <primary-nav :scrolled="scrolled" />
     <site-header :title="siteTitle" />
     <main role="main">
+
       <about />
       <amenities />
-      <comfort />      
+      <comfort />
     </main>
     <site-footer />
   </div>
