@@ -1,7 +1,8 @@
 <template>
   <div>
+    <primary-nav :scrolled="scrolled"/>
     <main role="main">
-      <section class="py-6 purchase">
+      <section class="py-8 mt-8 purchase">
         <div class="container sm:w-4/5 mx-auto">
           <h2 class="text-center uppercase text-4xl mb-4 mt-8 border-after border-after-center">Units For Lease</h2>
           <div class="md:flex justify-center content-center flex-wrap">
@@ -42,22 +43,26 @@
     </main>
 
 
-    <footer class="bg-orange-fairmont-dark py-8">
-      <div class="container mx-auto py-8 opacity-75 font-thin">
-        <h2>The Fairmont</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, expedita laborum. Deleniti facere impedit eveniet ex quod iste, illum laudantium blanditiis dolor explicabo doloribus magni architecto exercitationem quas maxime saepe.</p>
-        <p>Expedita, sapiente iure? Omnis ea repellat quae at earum excepturi eius nam dolorem eum ipsum, possimus quam saepe, laboriosam nulla. Hic, iusto? Cumque facilis totam temporibus architecto aspernatur tempore inventore.</p>
-        <p>Dolore, minima? Quia ad soluta quod a, consequatur, quisquam voluptate doloribus neque molestias harum asperiores deleniti necessitatibus beatae perferendis dicta. Dolor eligendi, illo ab sint consectetur fugiat ea quisquam asperiores.</p>
-        <p>Nobis odio asperiores libero minima nisi quae necessitatibus quaerat nesciunt doloremque, voluptatibus tempore sed assumenda molestias fugit, consequatur aut eos ipsum! Exercitationem adipisci facere ducimus dolor fugiat omnis dolorum deleniti.</p>
-        <p>Placeat minus sapiente, amet unde dolores, ad aliquid culpa aspernatur ducimus atque quae sit porro delectus illum id ullam temporibus repudiandae autem necessitatibus mollitia laborum enim. Doloremque magni necessitatibus cum!</p>
-      </div>
-    </footer>
+    <site-footer />
 
   </div>
 </template>
 
 <script>
-export default {}
+import PrimaryNav from '~/components/Nav';
+import SiteFooter from '~/components/Footer';
+
+export default {
+  data() {
+    return {
+      scrolled: true
+    }
+  },
+  components: {
+    PrimaryNav,
+    SiteFooter
+  }
+}
 </script>
 
 <style scoped>

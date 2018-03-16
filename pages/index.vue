@@ -60,21 +60,3 @@ export default {
 }
 </script>
 
-<style scoped>
-header {
-  background-image: url('~/static/fairmontbuilding2.jpg');
-  background-position-y: bottom;
-}
-.text-shadow {
-  text-shadow: 2px 2px 8px rgba(0,0,0,.93);
-}
-.text-shadow-all * {
-  text-shadow: 2px 2px 8px rgba(0,0,0,.93);
-}
-
-.comfort {
-  background-image: url('~/static/epskyline.jpg');
-}
-
-</style>
-
